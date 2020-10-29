@@ -1,0 +1,73 @@
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<mat-toolbar class="toolbar2">
+     
+    <span></span>
+    <span class="example-spacer"></span>
+   <div class="logindiv">
+    <button  class="mat-button" mat-raised-button color="primary" (click)="routeto()">Log In</button>
+  </div>
+  </mat-toolbar>
+<section class="section1blockclass">
+  <header>
+      <h1 class="headertext">Good Food...Good Mood...</h1>
+      <div class="subtitle">
+          Best restaurants in kerala delivering to your doorstep.
+      </div>
+     
+  </header>
+</section>
+<div class="betweendiv">
+  <span>
+    <h3 class="betweentext">Our Latest Collections for you...</h3>
+
+  </span>
+</div>
+
+<div class="clsmatch">
+<mat-card class="carddisplay" *ngFor="let res of newrestaurant | paginate:{itemsPerPage:8,currentPage:q}">
+
+    <mat-card-header class="matheaderclass">
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title class="mattitleclass">{{res.collection.title}}</mat-card-title>
+        <mat-card-subtitle>Restaurant</mat-card-subtitle>
+      </mat-card-header>
+      <img class="imageclass"mat-card-image src="{{res.collection.image_url}}" alt="Photo of a cuisine">
+      <mat-expansion-panel class = "mat-expansion-panel">  
+          <mat-expansion-panel-header>  
+          More Details  
+          </mat-expansion-panel-header>  
+          <p>{{res.collection.description}}</p>  
+        </mat-expansion-panel>  
+   
+      <mat-card-actions>
+          <button class="addtofav" mat-raised-button color="primary" (click)="routeto()">Add to Favourite</button>
+        
+       
+      </mat-card-actions>
+     
+  </mat-card>
+
+  <div class="paginationdiv">
+    
+        <span><pagination-controls (pageChange)="q=$event"></pagination-controls>	</span>
+   
+   
+      
+  </div>
+  
+
+
+</div>
+
+    
+  
+  
+  
+  
+         
+  
+  
+  

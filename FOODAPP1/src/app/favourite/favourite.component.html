@@ -1,0 +1,52 @@
+<mat-toolbar class="toolbar2">
+    <span class="example-spacer"></span>
+    <span><h1></h1></span>
+    <button  class="mat-button2" mat-raised-button color="primary" (click)="routetodash()">DashBoard</button>
+    <span><h1></h1></span>
+    <button  class="mat-button1" mat-raised-button color="primary" (click)="logout()">Logout</button>
+    
+</mat-toolbar>
+<section class="section1blockclass">
+        <header>
+            <h1 class="headertext">Your Favourites ❤</h1>
+            <div class="subtitle">
+                Checkout the collections you have added so far..
+            </div>
+        </header>
+      </section>
+      <div class="betweendiv">
+        <span>
+          <h3 class="betweentext">Most adore to you</h3>
+      
+        </span>
+      </div>
+      <div class ="clsmatch">
+        
+      <mat-card class="carddisplay" *ngFor="let newfavourite of newfavourites | paginate:{itemsPerPage:12,currentPage:q}">
+
+            <mat-card-header class="matheaderclass">
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title class="mattitleclass">{{newfavourite.title}}</mat-card-title>
+                <mat-card-subtitle>Restaurant</mat-card-subtitle>
+              </mat-card-header>
+              
+              <mat-card-content class="matcontentclass">
+                  <img class="imageclass"mat-card-image src="{{newfavourite.image_url}}" alt="Photo of a cuisine">
+                <p class="description">
+                    {{newfavourite.description}}
+                </p>
+              </mat-card-content>
+              <mat-card-actions>
+                  <div class="example-button-container">
+                      <button mat-fab color="primary" (click)="deleteFavourites(newfavourite.id)"aria-label="Example icon button with a delete icon">
+                        <mat-icon>delete</mat-icon>
+                      </button>
+                    </div>
+              
+              
+             
+            </mat-card-actions>
+        
+          
+          </mat-card>
+        </div>

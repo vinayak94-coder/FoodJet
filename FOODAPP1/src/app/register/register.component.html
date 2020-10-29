@@ -1,0 +1,106 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<body style="background-color: #666666;">
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<form class="login100-form validate-form">
+					<span class="login100-form-title p-b-43">
+						Sign Up 
+					</span>
+
+					
+		      <form [formGroup]="form" (ngSubmit)="onregister()">
+                <div class="wrap-input100 validate-input" >
+						<input class="input100" type="text" placeholder="Username" formControlName="name" name="username">
+						<span class="focus-input100"></span>
+						
+                </div>
+          
+                <div class="wrap-input100 validate-input" >
+						<input class="input100" type="text" placeholder="Enter your Location" formControlName="location" name="location">
+						<span class="focus-input100"></span>
+						
+				</div>
+          
+				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" placeholder="Email" formControlName="mail" name="email">
+						<span class="focus-input100"></span>
+						
+                </div>
+
+                <div class="wrap-input100 validate-input">
+						<input class="input100" type="text" placeholder="Mobile Number" formControlName="mobile" name="mobile">
+						<span class="focus-input100"></span>
+						
+				</div>
+					
+					
+				<div class="wrap-input100 validate-input" data-validate="Password is required">
+						<input class="input100" type="password" placeholder="Password" formControlName="password" name="password">
+						<span class="focus-input100"></span>
+						
+		        </div>
+		  
+		        <div class="container-login100-form-btn">
+					
+			       <button type="submit" class="login100-form-btn">Sign Up</button>
+				   <span class="spinner-border spinner-border-sm mr-1"></span>
+				
+		  
+		        </div>
+          
+              </form>
+
+				
+
+			 
+					<div class="loginonregister">
+						<span>
+							<a href="#" class="login100-form-btn" id="event" (click)="login($event)">Log In</a>
+						</span>
+						
+						
+					</div>
+					
+
+				
+				</form>
+			
+
+				<div class="login100-more">
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+
+   
+     
